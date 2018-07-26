@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     environment {
         CI = 'true'
     }
@@ -8,13 +8,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                gradle build
+              sh 'gradle build'
             }
         }
 	stage('Test'){
 	    steps {
 		  sh './scripts/test.sh'
-		}	
+		}
         }
     }
 }
