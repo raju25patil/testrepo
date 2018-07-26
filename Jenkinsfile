@@ -21,29 +21,22 @@ pipeline {
             when {
                 branch 'dev-env'
             }
-            #stage('Build') {
                 steps {
                   sh '/usr/local/bin/gradle build'
                 }
-            #}
 
-	    #stage('Test'){
                 steps {
                   sh './scripts/test.sh'
                 }
-           # }
         }
         stage('Release for QA-enviornment') {
             when {
                 branch 'test-env'
             }
-            #stage('Build') {
                 steps {
                   sh '/usr/local/bin/gradle build'
                 }
-            #}
 
-            #stage('Test'){
                 steps {
                   sh './scripts/test.sh'
                 }   
@@ -53,8 +46,6 @@ pipeline {
                     archiveArtifacts artifacts: '**/target/*.war'
                   }
                }
-            #}
-	    #stage('Deployment On Release Environment') {
 
 		steps {
                   sh './scripts/deployment-on-relase.sh'
@@ -65,7 +56,6 @@ pipeline {
                   }
                 }
             
-            #}          
         }
         stage('Creating Docker Image from the Release branch') {
            when {
