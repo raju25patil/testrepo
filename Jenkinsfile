@@ -15,7 +15,13 @@ pipeline {
 	    steps {
 		  sh './scripts/test.sh'
 		}
-        }
+             post {
+                success {
+                    echo 'Now Archiving...'
+                    archiveArtifacts artifacts: '**/target/*.war'
+                }
+            }
 
+         }
     }
 }
