@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-              sh 'gradle build'
+              sh '/usr/local/bin/gradle build'
             }
         }
 	stage('Test'){
