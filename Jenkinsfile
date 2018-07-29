@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        /*stage('Build') {
             steps {
                 sh '/usr/local/bin/gradle build'
             }
@@ -10,7 +10,8 @@ pipeline {
             steps {
                 sh '/usr/local/bin/gradle sonarqube'
             }
-        }
+        }*/
+        
         stage('build-dockerimage') {
           steps {
                timeout(time:5, unit:'DAYS'){
