@@ -4,14 +4,21 @@ buildscript {
     }
     repositories {
         mavenCentral()
+        mavenLocal()
+        maven { url "https://repo.grails.org/grails/core" }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath "net.saliman:gradle-cobertura-plugin:2.5.0"
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.5"
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
+apply plugin: "war"
+apply plugin: "net.saliman.cobertura"
+apply plugin: "org.sonarqube"
 
 repositories {
     mavenCentral()
@@ -36,3 +43,20 @@ dependencies {
     testCompile('org.mockito:mockito-core:2.18.0')
 
 }
+
+sonarqube {
+ properties {
+ property "sonar.host.url", "http://localhost:9000"
+ property "sonar.cobertura.reportPath" ,"/build/reports/cobertura/coverage.xml"
+ property "sonar.junit.reportsPath","build/reports/tests"
+ property "sonar.groovy.cobertura.reportPath","/build/reports/cobertura/coverage.xml"
+ property "sonar.java.coveragePlugin","cobertura"
+ }
+}
+
+cobertura {
+    coverageFormats = ['xml','html']
+}
+
+test.finalizedBy(project.tasks.cobertura)
+project.tasks["sonarqube"].dependsOn test

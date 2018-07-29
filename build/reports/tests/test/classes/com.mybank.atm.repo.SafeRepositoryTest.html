@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.mybank.atm.repo.SafeRepositoryTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.mybank.atm.repo.SafeRepositoryTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.mybank.atm.repo.html">com.mybank.atm.repo</a> &gt; SafeRepositoryTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.012s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testGetNotes</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>[INFO] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mybank.atm.repo.SafeRepositoryTest], using SpringBootContextLoader
+[INFO] Could not detect default resource locations for test class [com.mybank.atm.repo.SafeRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[INFO] Could not detect default configuration classes for test class [com.mybank.atm.repo.SafeRepositoryTest]: SafeRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO] Found @SpringBootConfiguration com.mybank.atm.AtmApplication for test class com.mybank.atm.repo.SafeRepositoryTest
+[INFO] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2ae0ce6f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6e50e506, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@497c9653, org.springframework.test.context.support.DirtiesContextTestExecutionListener@23c73dc5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@f780c64, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@66e9b058, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4b8a7cd8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@51395979, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1e6d6416, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@352d7cf3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2dd9aa32, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@36b0dc61]
+[INFO] Began transaction (1) for test context [DefaultTestContext@69c5ae14 testClass = SafeRepositoryTest, testInstance = com.mybank.atm.repo.SafeRepositoryTest@1e40855b, testMethod = testGetNotes@SafeRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@43884375 testClass = SafeRepositoryTest, locations = '{}', classes = '{class com.mybank.atm.AtmApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@2480bd81, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@460a9587, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4c032a48, [ImportsContextCustomizer@1d1c6513 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7a25e733, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@e9faed3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.jpa.JpaTransactionManager@31243ac]; rollback [true]
+Hibernate: select safe0_.bank_note as bank_not1_1_, safe0_.note_count as note_cou2_1_ from safe safe0_ where safe0_.bank_note=?
+Hibernate: select safe0_.bank_note as bank_not1_1_, safe0_.note_count as note_cou2_1_ from safe safe0_ where safe0_.bank_note=?
+Hibernate: select safe0_.bank_note as bank_not1_1_, safe0_.note_count as note_cou2_1_ from safe safe0_ where safe0_.bank_note=?
+Hibernate: select safe0_.bank_note as bank_not1_1_, safe0_.note_count as note_cou2_1_ from safe safe0_ where safe0_.bank_note=?
+[INFO] Rolled back transaction for test context [DefaultTestContext@69c5ae14 testClass = SafeRepositoryTest, testInstance = com.mybank.atm.repo.SafeRepositoryTest@1e40855b, testMethod = testGetNotes@SafeRepositoryTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@43884375 testClass = SafeRepositoryTest, locations = '{}', classes = '{class com.mybank.atm.AtmApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@2480bd81, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@351584c0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@460a9587, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@4c032a48, [ImportsContextCustomizer@1d1c6513 key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7a25e733, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@e9faed3, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]].
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 4.9</a> at Jul 28, 2018 2:36:27 PM</p>
+</div>
+</div>
+</body>
+</html>
