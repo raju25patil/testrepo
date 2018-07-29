@@ -41,3 +41,19 @@ dependencies {
     testCompile('org.mockito:mockito-core:2.18.0')
 
 }
+
+sonarqube {
+ properties {
+ property "sonar.cobertura.reportPath" ,"/build/reports/cobertura/coverage.xml"
+ property "sonar.junit.reportsPath","build/reports/tests"
+ property "sonar.java.cobertura.reportPath","/build/reports/cobertura/coverage.xml"
+ property "sonar.java.coveragePlugin","cobertura"
+ }
+}
+
+cobertura {
+    coverageFormats = ['xml','html']
+}
+
+test.finalizedBy(project.tasks.cobertura)
+project.tasks["sonarqube"].dependsOn test
