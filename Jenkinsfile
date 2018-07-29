@@ -1,17 +1,21 @@
 pipeline {
     agent any
+    //building the war file 
     stages {
-        /*stage('Build') {
+        stage('Build') {
             steps {
                 sh '/usr/local/bin/gradle build'
             }
         }
+        
+        //Running the sonar cube analysis
          stage('Sonar Analysis') {
             steps {
                 sh '/usr/local/bin/gradle sonarqube'
             }
-        }*/
+        }
         
+        //Building the image from newly created app war file 
         stage('build-dockerimage') {
           steps {
                timeout(time:5, unit:'DAYS'){
