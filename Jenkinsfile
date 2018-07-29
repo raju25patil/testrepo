@@ -16,11 +16,9 @@ pipeline {
           steps {
                timeout(time:5, unit:'DAYS'){
                  input message: 'Want to build Dokcer Image ? '
+                 sh './scripts/dockerbuild.sh'
                }
            } 
-           steps {
-                 sh './scripts/dockerbuild.sh'
-           }
            post {
              success {
                echo 'Doker Image has been built and pushed to reposetory'
